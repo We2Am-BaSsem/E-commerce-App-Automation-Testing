@@ -14,5 +14,5 @@ import io.cucumber.testng.CucumberOptions;
                 "rerun:target/rerun.txt"},
         tags = "@smoke"
 )
-class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests {
 }
