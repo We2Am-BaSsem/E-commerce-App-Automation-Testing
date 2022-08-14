@@ -21,6 +21,9 @@ public class HomePage {
     @FindBy(css = "a.ico-login[href=\"/login?returnUrl=%2F\"]")
     public WebElement loginHyperLinkPom;
 
+    @FindBy(css = "a.ico-wishlist[href=\"/wishlist\"]")
+    public WebElement wishlistHyperLinkPom;
+
     @FindBy(css = "select[name=\"customerCurrency\"]")
     public WebElement currencyDropdownListPom;
 
@@ -68,4 +71,14 @@ public class HomePage {
 
     @FindBy(css = "a[href=\"http://www.youtube.com/user/nopCommerce\"]")
     public WebElement youtubeFollowUsButtonPom;
+
+    @FindBy(css = "button.add-to-wishlist-button[title=\"Add to wishlist\"]")
+    public List<WebElement> ProductsWishlistButtonPom;
+
+    @FindBy(css = "div.bar-notification")
+    public WebElement notificationPom;
+
+    @FindBy(xpath = "//tr//td[@class=\"quantity\"]//input")
+    public List<WebElement> wishlistProductQuantityPom;
+
 }
