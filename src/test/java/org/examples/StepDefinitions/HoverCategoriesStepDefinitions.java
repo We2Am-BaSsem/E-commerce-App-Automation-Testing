@@ -12,17 +12,6 @@ import org.testng.asserts.SoftAssert;
 import java.util.List;
 
 public class HoverCategoriesStepDefinitions {
-    HomePage homePage = null;
+    HomePage homePage = new HomePage(Hooks.webDriver);
     SoftAssert softAssert;
-
-    @Before
-    public void openBrowser() {
-        homePage = new HomePage(Hooks.webDriver);
-        softAssert = new SoftAssert();
-    }
-
-    @Then("the product sku should be equal to {string}")
-    public void theProductSkuShouldBeEqualTo(String sku) {
-        Assert.assertTrue(homePage.productsSkuPom.getText().toLowerCase().contains(sku.toLowerCase()), homePage.productsSkuPom.getText().concat(" does not contain ").concat(sku));
-    }
 }

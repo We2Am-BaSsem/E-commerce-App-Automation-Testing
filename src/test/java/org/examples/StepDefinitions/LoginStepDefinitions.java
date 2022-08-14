@@ -12,16 +12,9 @@ import org.openqa.selenium.support.Color;
 import org.testng.asserts.SoftAssert;
 
 public class LoginStepDefinitions {
-    LoginPage loginPage = null;
-    HomePage homePage = null;
-    SoftAssert softAssert;
-
-    @Before
-    public void openBrowser() {
-        loginPage = new LoginPage(Hooks.webDriver);
-        homePage = new HomePage(Hooks.webDriver);
-        softAssert = new SoftAssert();
-    }
+    LoginPage loginPage = new LoginPage(Hooks.webDriver);
+    HomePage homePage = new HomePage(Hooks.webDriver);
+    SoftAssert softAssert = new SoftAssert();
 
     @Given("user go to login page")
     public void userGoToLoginPage() throws InterruptedException {

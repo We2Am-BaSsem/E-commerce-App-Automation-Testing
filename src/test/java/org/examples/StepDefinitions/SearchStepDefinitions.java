@@ -12,8 +12,8 @@ import org.testng.asserts.SoftAssert;
 import java.util.List;
 
 public class SearchStepDefinitions {
-    HomePage homePage = null;
-    SoftAssert softAssert;
+    HomePage homePage = new HomePage(Hooks.webDriver);
+    SoftAssert softAssert = new SoftAssert();;
 
     @Before
     public void openBrowser() {

@@ -12,12 +12,7 @@ import org.testng.Assert;
 import java.util.List;
 
 public class CurrenciesStepDefinitions {
-    HomePage homePage = null;
-
-    @Before
-    public void openBrowser() {
-        homePage = new HomePage(Hooks.webDriver);
-    }
+    HomePage homePage = new HomePage(Hooks.webDriver);
 
     @Given("user open browser and visit the home page")
     public void userOpenBrowserAndVisitTheHomePage() {

@@ -10,17 +10,9 @@ import io.cucumber.java.en.When;
 import org.testng.asserts.SoftAssert;
 
 public class RegisterStepDefinitions {
-    RegisterPage registerPage = null;
-    HomePage homePage = null;
-    SoftAssert softAssert;
-
-    @Before
-    public void openBrowser() {
-        registerPage = new RegisterPage(Hooks.webDriver);
-        homePage = new HomePage(Hooks.webDriver);
-        softAssert = new SoftAssert();
-    }
-
+    RegisterPage registerPage = new RegisterPage(Hooks.webDriver);
+    HomePage homePage = new HomePage(Hooks.webDriver);
+    SoftAssert softAssert = new SoftAssert();;
 
     @Given("user go to register page")
     public void userGoToRegisterPage() throws InterruptedException {
