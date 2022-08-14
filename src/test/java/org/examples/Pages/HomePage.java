@@ -44,4 +44,10 @@ public class HomePage {
 
     @FindBy(css = "div.sku")
     public WebElement productsSkuPom;
+
+    @FindBy(css = "div.nivoSlider")
+    public WebElement sliderPom;
+
+    @FindBy(css = "a.nivo-control")
+    public List<WebElement> sliderSelectorPom;
 }
