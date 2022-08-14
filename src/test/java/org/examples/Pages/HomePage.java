@@ -45,6 +45,12 @@ public class HomePage {
     @FindBy(css = "div.sku")
     public WebElement productsSkuPom;
 
+    @FindBy(xpath = "//ul[@class=\"top-menu notmobile\"]/li")
+    public List<WebElement> mainCategoriesBarPom;
+
+    @FindBy(xpath = "//div[@class='page-title']//h1")
+    public WebElement categoriesTitlePom;
+
     @FindBy(css = "div.nivoSlider")
     public WebElement sliderPom;
 
