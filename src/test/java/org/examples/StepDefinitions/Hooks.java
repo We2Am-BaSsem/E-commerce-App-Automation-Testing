@@ -7,8 +7,12 @@ import org.examples.Pages.LoginPage;
 import org.examples.Pages.RegisterPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
@@ -27,11 +31,19 @@ public class Hooks {
         webDriver.navigate().to(url);
     }
 
-
-
     @After
     public void closeBrowser() throws InterruptedException {
         Thread.sleep(3000);
         webDriver.quit();
+    }
+
+    public static void navigateToAnotherTab(int tabIndex, int expectedOpenedTabs) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(7));
+        wait.until(ExpectedConditions.numberOfWindowsToBe(expectedOpenedTabs));
+
+        ArrayList<String> tabs = new ArrayList<>(webDriver.getWindowHandles());
+        System.out.println(tabs.size());
+
+        webDriver.switchTo().window(tabs.get(tabIndex));
     }
 }

@@ -56,4 +56,16 @@ public class HomePage {
 
     @FindBy(css = "a.nivo-control")
     public List<WebElement> sliderSelectorPom;
+
+    @FindBy(css = "a[href=\"http://www.facebook.com/nopCommerce\"]")
+    public WebElement facebookFollowUsButtonPom;
+
+    @FindBy(css = "a[href=\"https://twitter.com/nopCommerce\"]")
+    public WebElement twitterFollowUsButtonPom;
+
+    @FindBy(css = "a[href=\"/news/rss/1\"]")
+    public WebElement rssFollowUsButtonPom;
+
+    @FindBy(css = "a[href=\"http://www.youtube.com/user/nopCommerce\"]")
+    public WebElement youtubeFollowUsButtonPom;
 }

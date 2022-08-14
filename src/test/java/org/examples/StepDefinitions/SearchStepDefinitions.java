@@ -15,12 +15,6 @@ public class SearchStepDefinitions {
     HomePage homePage = new HomePage(Hooks.webDriver);
     SoftAssert softAssert = new SoftAssert();;
 
-    @Before
-    public void openBrowser() {
-        homePage = new HomePage(Hooks.webDriver);
-        softAssert = new SoftAssert();
-    }
-
     @When("user types {string} in search field")
     public void userTypesInSearchField(String productName) {
         homePage.searchInputPom.clear();
