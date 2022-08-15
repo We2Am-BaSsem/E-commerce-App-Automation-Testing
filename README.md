@@ -1,5 +1,5 @@
 # E-commerce App Automation Testing
-Apply system testing on an e-commerce website using cucumber and selenium with java.
+Apply system testing on an e-commerce website using cucumber and selenium with java following BDD methodology.
 
 
  
